@@ -48,7 +48,7 @@ WHERE row_num > 1; -- cannot delete from here, so we will create a new table and
 
 DROP TABLE layoffs_copy2;
 
--- run this so the table will have row_num
+-- run this so the table will have row_num on our new table
 CREATE TABLE `layoffs_copy2` (
   `company` text,
   `location` text,
