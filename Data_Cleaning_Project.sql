@@ -32,8 +32,8 @@ PARTITION BY company, location, industry, total_laid_off,
 percentage_laid_off, 'date', stage, country, funds_raised_millions) AS row_num
 FROM layoffs_copy;
 
--- create a CTE to find the duplicates. The duplicates would be row_num > 1. Not sure
--- 		if the example work for guided project. 
+-- create a CTE to find the duplicates. The duplicates would be row_num > 1
+
 WITH duplicate_CTE AS(
 SELECT *, 
 ROW_NUMBER() OVER(
